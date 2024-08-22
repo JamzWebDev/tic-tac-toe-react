@@ -7,7 +7,27 @@ font-size: 3rem;
 border: none;
 width: 10rem;
 height: 10rem;
-border-radius: 10px;
+border-radius: 2.5rem;
 box-shadow: 5px 10px ${(props) => props.theme.colors.purple};
 cursor: pointer;
-`
+padding: 3rem;
+
+.markedItem {
+  path {
+    fill: ${(props) => props.theme.colors.primary};
+  }
+}
+
+.outlineIcon {
+  path {
+      stroke: ${(props) => props.theme.colors.secondary};
+      stroke-width: 0;
+}
+
+&:hover {
+    .outlineIcon {
+    path { 
+        stroke-width: 2;
+    }
+}
+`;
