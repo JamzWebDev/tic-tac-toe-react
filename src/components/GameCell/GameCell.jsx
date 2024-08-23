@@ -10,42 +10,48 @@ import { ModalContext } from "../../contexts/ModalContext";
 import RoundOverModal from "../Modal/RoundOverModal/RoundOverModal";
 import { SfxContext } from "../../contexts/SfxContext";
 
-const GameCell = ({ cellItem, index }) => {
+const GameCell = ({ cellItem, index, isWinningCell }) => {
   const { updateBoard, game, roundComplete } = useContext(GameContext);
-  const { handleModal } = useContext(ModalContext)
-  const { hoverSfx, clickedSfx, winnerSfx, completedSfx} = useContext(SfxContext)
+  const { handleModal } = useContext(ModalContext);
+  const { hoverSfx, clickedSfx, winnerSfx } =
+    useContext(SfxContext);
 
   const cellClickHandler = () => {
     clickedSfx();
     updateBoard(index);
-    const result = checkForWinner(game.board)
-    if(result) {
-      roundComplete(result)
-      if(result !== "draw") {
+    const result = checkForWinner(game.board);
+    console.log(result);
+    if (result) {
+      roundComplete(result);
+      if (result !== "draw") {
         winnerSfx();
-      } else {
-        completedSfx()
       }
-      handleModal(<RoundOverModal />)
-    };
+      setTimeout(() => {
+        handleModal(<RoundOverModal />);
+      }, 2000);
+    }
   };
 
   if (cellItem === "x") {
     return (
-      <CellStyle>
-        <IconX className="markedItem"/>
+      <CellStyle isWinningCell={isWinningCell ?? false}>
+        <IconX className="markedItem" />
       </CellStyle>
     );
   } else if (cellItem === "o") {
     return (
-      <CellStyle>
-        <IconO className="markedItem"/>
+      <CellStyle isWinningCell={isWinningCell ?? false}>
+        <IconO className="markedItem" />
       </CellStyle>
     );
   }
   return (
     <CellStyle onClick={cellClickHandler} onMouseEnter={() => hoverSfx()}>
-      {game.turn === "x" ? <XIconOutline className="outlineIcon" /> : <OIconOutline className="outlineIcon" />}
+      {game.turn === "x" ? (
+        <XIconOutline className="outlineIcon" />
+      ) : (
+        <OIconOutline className="outlineIcon" />
+      )}
     </CellStyle>
   );
 };
