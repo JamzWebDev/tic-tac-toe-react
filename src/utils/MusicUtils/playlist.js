@@ -1,6 +1,4 @@
-const playlist = [
-   "https://jetsetradio.live/radio/stations/lofi/90sFlav - Balmy.mp3",
-    "https://jetsetradio.live/radio/stations/lofi/90sFlav - Call Me.mp3",
+export const playlist = [
     "https://jetsetradio.live/radio/stations/lofi/Adam Kay - Rehab (Instrumental).mp3",
     "https://jetsetradio.live/radio/stations/lofi/Aekasora - almost there.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Afternoon - spring (w park bird).mp3",
@@ -10,7 +8,6 @@ const playlist = [
     "https://jetsetradio.live/radio/stations/lofi/App - My First.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Aqualina - Love Letters W-eiiwun.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Aso - Coffee.mp3",
-    "https://jetsetradio.live/radio/stations/lofi/athena - one side..mp3",
     "https://jetsetradio.live/radio/stations/lofi/Bassti - To all the ladies in the place.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Bknapp - Game Over (Super Mario Lofi).mp3",
     "https://jetsetradio.live/radio/stations/lofi/blvknight - decembr.mp3",
@@ -45,7 +42,6 @@ const playlist = [
     "https://jetsetradio.live/radio/stations/lofi/GentleBeatz - Silent Thoughts.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Hakaisu - Shelter (ft Alys).mp3",
     "https://jetsetradio.live/radio/stations/lofi/Halberd - Nvm.mp3",
-    "https://jetsetradio.live/radio/stations/lofi/hisohkah - bike ride.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Hm Surf  - Sid's Lesson.mp3",
     "https://jetsetradio.live/radio/stations/lofi/Ibrahim - Bullet Train Fantasy (w luvbird).mp3",
 ]

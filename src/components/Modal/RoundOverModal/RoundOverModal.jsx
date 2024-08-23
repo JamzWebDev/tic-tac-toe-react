@@ -18,9 +18,9 @@ const RoundOverModal = () => {
     <>
       <ModalHeader>
         <Title>
-          {" "}
-          {game.roundWinner ? game.roundWinner.name : ""}{" "}
-          {game.roundWinner ? "Wins Round" : "Round Drawn"}
+          {game.roundWinner
+            ? `${game.roundWinner.name} Wins Round`
+            : "Round Drawn"}
         </Title>
       </ModalHeader>
       <ModalBody>
@@ -48,7 +48,7 @@ const RoundOverModal = () => {
             completedSfx();
             restartGame();
             handleModal();
-            navigate("/")
+            navigate("/");
           }}
           onMouseEnter={() => hoverSfx()}
         >
